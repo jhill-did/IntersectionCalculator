@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Intersection Calculator</title>
+    <style>
+      .stat-box { background-color: #faebd7; padding: 2px; }
+    </style>
+  </head>
+  <body style="background-color:rgb(240,240,240)">
+    <div style="display:flex; flex-direction:row;" >
+      <div style="background-color:white; border-width:2px; border-style:solid">
+        <canvas id="canvas" width="512" height="512" />
+      </div>
+      <div style="padding:10px; display:flex; flex-direction:column">
+        <div>
+          Current Tool:
+        </div>
+        <button id="currentToolButton" onclick="toggleTool()">
+          Line
+        </button>
+        <div id="clearButtonContainer" style="display:block; padding-top:5px">
+          <button id="clearButton" onclick="clearLineSegments()">
+            Clear
+          </button>
+        </div>
+
+        <!-- Line Values -->
+        <div style="padding-top: 10px">
+          Line Segments:
+          <div id="lineSegmentsText" class="stat-box">Null</div>
+        </div>
+
+        <!-- Circle Values -->
+        <div style="padding-top: 10px">
+          Circle: <div id="circleCenterText" class="stat-box">Null</div>
+        </div>
+        <div>
+          Radius: <div id="circleRadiusText" class="stat-box">Null</div>
+        </div>
+
+        <!-- Intersection Values -->
+        <div style="padding-top: 10px">
+          Intersections:
+          <div id="intersectionsText" class="stat-box">Null</div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="calculator.js"></script>
+</html>
